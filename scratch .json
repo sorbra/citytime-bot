@@ -1,0 +1,25 @@
+{
+    "responseId": "e18d1d5f-6bde-4752-af24-483741ecae56",
+    "queryResult": {
+        "queryText": "Hi there",
+        "action": "input.welcome",
+        "parameters": {},
+        "allRequiredParamsPresent": true,
+        "fulfillmentText": "Good day! What can I do for you today?",
+        "fulfillmentMessages": [
+            {
+                "text": {
+                    "text": [
+                        "Greetings! How can I assist?"
+                    ]
+                }
+            }
+        ],
+        "intent": {
+            "name": "projects/time-of-day-bot/agent/intents/3ff97a38-9a98-4707-9c12-d3ac0ea0c31b",
+            "displayName": "Default Welcome Intent"
+        },
+        "intentDetectionConfidence": 1,
+        "languageCode": "en"
+    }
+}
