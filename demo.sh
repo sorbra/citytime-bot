@@ -8,16 +8,12 @@ dotnet new webapi --name mybot
 cd mybot
 code .
 
-# comment out useHttpsRedirection in Startup.cs (Ctrl-')
-
-dotnet run
-# open browser on http://localhost:5000/api/values
+# comment out useHttpsRedirection, useMvc and addMvc in Startup.cs (Ctrl-')
 
 dotnet add package Google.Cloud.Dialogflow.V2 --version=1.0.0-beta02
 dotnet restore
 
-# create new file DialogflowFulfillment.cs 
-# copy contents of this DialogflowFulfillment.cs
+# Copy Chat folder from here to new thing
 # ctrl-K ctrl-0 to collapse all
 # code walkthrough
 
@@ -35,14 +31,13 @@ dotnet run
 # change .dockerignore */bin to bin and */obj to obj
 
 # Build and tag the docker container
-docker build -t sorbra/dfdemo:1.0 -f ./Dockerfile .
+docker build -t sorbra/dfdemo:0.1 -f ./Dockerfile .
 
 # Run container locally in Docker
-docker run --detach --publish 4900:80 --name mybot sorbra/dfdemo:1.0
+docker run --detach --publish 4900:80 --name mybot sorbra/dfdemo:0.1
 
 # Push container to Docker Hub
-docker push sorbra/dfdemo:1.0
+docker push sorbra/dfdemo:0.1
 
-kubectl config use-context DIMA-Dev-Cluster
 ...
 
