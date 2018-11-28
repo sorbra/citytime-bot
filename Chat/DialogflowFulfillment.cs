@@ -91,11 +91,10 @@ namespace mybot.Dialogflow
 
                 if (outputContext == null) throw new NotSupportedException("Missing context city-followup");
 
-                DateTime now;
                 string cityName = request.QueryResult.Parameters.Fields["geo-city"].StringValue;
                 try
                 {
-                    now = TimeZoneInfo.ConvertTime(
+                    DateTime now = TimeZoneInfo.ConvertTime(
                                             DateTime.UtcNow,
                                             _cityTimeZones.GetTimeZoneInfo(cityName)
                                         );

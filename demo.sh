@@ -1,8 +1,22 @@
 # demo the time-of-day here: https://bot.dialogflow.com/08bcffaa-d10e-4834-8408-1ce4bdac03d8
+#demo Google Home
 
-# walk throug dialogflow
+# walk through dialogflow
 # show intents and responses
-# demo with "don't know the time"
+
+# Show Web Integration
+# Show Google Actions
+# Show Responses for multiple channels
+
+# Show multiple languages
+
+# remove fulfilment and show what happens.
+# re-enable fulfilment
+# show fulfilment URL
+# show diagnostic info
+
+
+
 
 dotnet new webapi --name mybot
 cd mybot
@@ -14,7 +28,6 @@ dotnet add package Google.Cloud.Dialogflow.V2 --version=1.0.0-beta02
 dotnet restore
 
 # Copy Chat folder from here to new thing
-# ctrl-K ctrl-0 to collapse all
 # code walkthrough
 
 # add to Startup.cs as last statement in ConfigureServices():
